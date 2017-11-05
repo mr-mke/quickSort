@@ -15,7 +15,7 @@ public class QuickSort {
         int timelist[];
         Random randomGenerator = new Random();
         
-        timelist= new int[10];
+        timelist= new int[5];
         
         if(args.length == 1){
             n=Integer.parseInt(args[0]);
@@ -24,9 +24,9 @@ public class QuickSort {
         if(args.length == 2){
             n=Integer.parseInt(args[0]);
             runs=Integer.parseInt(args[1]);
-        }       
+        }
 
-        for(s=1;s<=5;s++){
+        for(s=0;s<5;s++){
             arr= new int[n];
 
             for(r=1;r<=runs;r++){
@@ -50,7 +50,6 @@ public class QuickSort {
                 System.out.println("Time taken: "+ timeElapsed.toMillis() +" milliseconds in run no."+r);
                 tottime += timeElapsed.toMillis();
             }
-
             System.out.println("Average time taken for  "+ runs +" runs = "+ tottime/runs +" milliseconds");
             n=n*10;
             timelist[s]=tottime/runs;
